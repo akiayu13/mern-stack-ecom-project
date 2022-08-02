@@ -5,7 +5,7 @@ const sendToken = require("../utils/jwtToken");
 
 //Register User
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
-  console.log(req.body);
+  // console.log(req.body);
   const { name, email, password } = req.body;
   const user = await User.create({
     name,
@@ -17,7 +17,7 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 
 //Login User
 exports.loginUser = catchAsyncErrors(async (req, res, next) => {
-  console.log(req.body);
+  // console.log(req.body);
   const { email, password } = req.body;
   if (!email || !password) {
     return res.status(400).json({
@@ -32,10 +32,10 @@ exports.loginUser = catchAsyncErrors(async (req, res, next) => {
       message: "Please enter valid email & password",
     });
   }
-  console.log(password);
+  // console.log(password);
 
   const isPasswordMatched = await user.comparePassword(password);
-  console.log(isPasswordMatched);
+  // console.log(isPasswordMatched);
   if (!isPasswordMatched) {
     return res.status(401).json({
       success: false,
@@ -46,7 +46,7 @@ exports.loginUser = catchAsyncErrors(async (req, res, next) => {
 });
 
 exports.logout = catchAsyncErrors(async (req, res, next) => {
-  console.log(res.cookie);
+  // console.log(res.cookie);
   res.cookie("token", "", {
     expire: new Date(Date.now()),
     httpOnly: true,
