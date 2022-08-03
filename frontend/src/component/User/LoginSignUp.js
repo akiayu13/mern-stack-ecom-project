@@ -8,7 +8,7 @@ import FaceIcon from "@material-ui/icons/Face";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login, register } from "../../actions/userAction";
 import { useAlert } from "react-alert";
-
+import MetaData from "../layout/MetaData.js";
 const LoginSignUp = ({ history, location }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
@@ -68,6 +68,7 @@ const LoginSignUp = ({ history, location }) => {
 
   return (
     <Fragment>
+      <MetaData title="Login | SignUp" />
       <div className="LoginSignUpContainer">
         <div className="LoginSignUpBox">
           <div>
