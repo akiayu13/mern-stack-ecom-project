@@ -28,9 +28,9 @@ export const getProduct = () => async (dispatch) => {
     console.log("in getProduct");
     dispatch({ type: ALL_PRODUCT_REQUEST });
 
-    const { data } = await axios.get("http://localhost:4000/product");
-    console.log(`*********************** ${data}*************************`);
-
+    const { data } = await axios.get("/product");
+    //console.log(`*********************** ${data}*************************`);
+    //console.log(`edsfdfdsf   ${req.protocol}://${req.get("host")} dfdsf`);
     dispatch({
       type: ALL_PRODUCT_SUCCESS,
       payload: data,
@@ -53,7 +53,7 @@ export const createProduct = (name, price, desc, img) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `http://localhost:4000/product/new`,
+      "/product/new",
       { name, price, desc, img },
       config
     );
@@ -81,7 +81,7 @@ export const updateProduct =
       };
 
       const { data } = await axios.put(
-        `http://localhost:4000/product/${id}`,
+        `/product/${id}`,
         { name, price, desc, img },
         config
       );
@@ -103,7 +103,7 @@ export const deleteProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
 
-    const { data } = await axios.delete(`http://localhost:4000/product/${id}`);
+    const { data } = await axios.delete(`/product/${id}`);
 
     dispatch({
       type: DELETE_PRODUCT_SUCCESS,

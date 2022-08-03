@@ -6,8 +6,10 @@ const REMOVE_CART_ITEM = "REMOVE_CART_ITEM";
 // Add to Cart
 export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
   console.log(id);
-  const { data } = await axios.get(`http://localhost:4000/product/${id}`);
-  console.log(data.quantity);
+  const { data } = await axios.get(`/product/${id}`);
+  // console.log(`edsfdfdsf   ${req.protocol}://${req.get("host")} dfdsf`);
+  // console.log(data.quantity);
+  // console.log("sfd");
   dispatch({
     type: ADD_TO_CART,
     payload: {
