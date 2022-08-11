@@ -15,15 +15,19 @@ To deploy this project run
     
 1. Go to Backend->Config->Config.env and change the dbURL.
 
-2. Change the directory to ./Frontend
+2. In root directory run
+```bash
+    npm install
+```
+3. Change the directory to ./Frontend
 ```bash
     cd Frontend
 ```
-3. Run the following command
+4. Run the following command
 ```bash
     npm run build
 ```
-4. Start
+5. Start
 ```bash
     npm start
 ```
