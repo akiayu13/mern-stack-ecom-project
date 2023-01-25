@@ -32,3 +32,23 @@ To deploy this project run
     npm start
 ```
 Enjoy!
+
+## Screenshots/GIFs
+
+   Landing
+   
+![landingg](https://user-images.githubusercontent.com/29685463/214487940-16e56c60-c42b-4aed-8e89-d063d6be9ad1.gif)
+
+   Cart & Login
+   
+![cart and login](https://user-images.githubusercontent.com/29685463/214486760-ae8e8ee2-df62-43b4-b645-fb970ff275cc.gif)
+   
+   Admin Dashboard
+
+![admin_dashboard](https://user-images.githubusercontent.com/29685463/214488850-79c5b5e0-d902-4a63-bb18-493eb94f4b81.png)
+
+   Delete and Update Product
+   
+![Delete_Update](https://user-images.githubusercontent.com/29685463/214488854-0d52fdcc-a53f-4c48-a299-8335fa364d79.png)
+
+   
